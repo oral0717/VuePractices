@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="msg">{{ msg }}</div>
+    <div>{{ msg }}</div>
+    <div>{{ $route.params.id }}</div>
+    <div>{{ $route.params.slogan }}</div>
     <router-view/>
   </div>
 </template>
@@ -15,9 +17,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.msg {
-  border:1px solid red;
-}
-</style>

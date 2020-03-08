@@ -3,13 +3,9 @@
     <img src="./assets/logo.png">
     <div>
       <router-link to='/'>首页</router-link> |
-      <router-link to='/hi'>hi页</router-link> |
-      <router-link :to="{name: 'Hi/Hi1', params: {username:'oral'}}">hi页1</router-link> |
-      <router-link to='/hi/hi2'>hi页2</router-link>
+      <router-link to='/hi/123/do my best'>hi页</router-link>
     </div>
     <router-view/>
-    <router-view name='left'/>
-    <router-view name='right'/>
   </div>
 </template>
 

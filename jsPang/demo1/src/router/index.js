@@ -12,19 +12,10 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      components: {
-        default: HelloWorld,
-        left: Hi,
-        right: Hi2
-      }
+      component: HelloWorld
     }, {
-      path: '/hi',
-      component: Hi,
-      children: [
-        { path: '/', name:"Hi", component: Hi},
-        { path: 'hi1', name: "Hi/Hi1", component: Hi1},
-        { path: 'hi2', name: "Hi/Hi2", component: Hi2}
-      ]
+      path: '/hi/:id(\\d+)/:slogan',
+      component: Hi
     }
   ]
 })

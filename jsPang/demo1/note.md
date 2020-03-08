@@ -39,6 +39,14 @@ npm run dev
       <router-link :to="{name: "路由组件注入的name", params: {username: 'oral'}}">
       指定组件上取值{{$route.params.username}}
     3. url传参
+      1. <router-link to='/hi/123/do my best'>hi页</router-link>
+      2. {
+          path: '/hi/:id(\\d+)/:slogan', //参数后直接加（），里面写入正则，约束参数规则
+          component: Hi
+        }
+      3. <div>{{ $route.params.id }}</div>
+        <div>{{ $route.params.slogan }}</div>
+
   6. 多个模块<router-view/>，只能允许一个不加name
     <router-view/>
     <router-view name='left'/>
