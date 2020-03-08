@@ -27,9 +27,17 @@ npm run dev
   package.json
     dependencies: vue vue-router
 ## P6-3单文件组件和Vue中的路由
-  <router-link to=""></router-link>
-  Vue.use(router)
-  <router-view/>
+  1. <router-link to=""></router-link>
+  2. Vue.use(router)
+  3. <router-view/>
+  4. 子路由注入：children
+  5. 参数传递
+    1. name传递(不实用，不常用)
+        路由组件上配置name属性
+        有子路由的路由没有name属性，由子路由的name来传值，取值{{ $route.name }}
+    2. <router-link to="">标签上传值（常用）：
+      <router-link :to="{name: "路由组件注入的name", params: {username: 'oral'}}">
+      指定组件上取值{{$route.params.username}}
 
 
 
