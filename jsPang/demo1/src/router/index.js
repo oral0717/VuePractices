@@ -16,6 +16,12 @@ export default new Router({
     }, {
       path: '/hi/:id(\\d+)/:slogan',
       component: Hi
+    }, {
+      path: '/goHome',
+      redirect: '/'
+    }, {
+      path: '/goHi/:id(\\d+)/:slogan',
+      redirect: '/hi/:id(\\d+)/:slogan'
     }
   ]
 })

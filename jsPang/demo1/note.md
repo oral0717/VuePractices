@@ -60,7 +60,16 @@ npm run dev
         right: Hi2
       }
     }
-  7. s
+  7. 重定向 redirect
+    1. <router-link to='/goHome'>返回首页</router-link>
+      <router-link to='/goHi/456/never give up, fight!'>返回hi页</router-link>
+    2. {
+        path: '/goHome',
+        redirect: '/'
+      }, {
+        path: '/goHi/:id(\\d+)/:slogan',
+        redirect: '/hi/:id(\\d+)/:slogan'
+      }
 
 
 

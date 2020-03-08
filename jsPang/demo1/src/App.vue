@@ -3,7 +3,9 @@
     <img src="./assets/logo.png">
     <div>
       <router-link to='/'>首页</router-link> |
-      <router-link to='/hi/123/do my best'>hi页</router-link>
+      <router-link to='/hi/123/do my best'>hi页</router-link> |
+      <router-link to='/goHome'>返回首页</router-link> |
+      <router-link to='/goHi/456/never give up, fight!'>返回hi页</router-link>
     </div>
     <router-view/>
   </div>
