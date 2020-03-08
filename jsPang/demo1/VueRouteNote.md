@@ -71,10 +71,59 @@ npm run dev
         redirect: '/hi/:id(\\d+)/:slogan'
       }
   8. alias别名
+    <router-link to="/hi1">hi1</router-link>
+    <router-link to="/alias">alias</router-link>
+    点击alias会打开hi1页面，但是路由仍是/alias
+    {
+      path: '/hi1',
+      component: Hi1,
+      alias: '/alias'
+    }
+  9. 路由过渡动画
+    <transition name="fade" mode="out-in">
+      <route-view/>
+    </transition>
+    <style>
+      .fade-enter, .fade-leave-to{
+        transition: opacity .5s
+      }
+      .fade-enter-active, .fade-leave-active {
+        opacity: 0
+      }
+    </style>
 
+  10. router/index.js
+      mode: "history" //域名下无#
+      mode: "hash" // 域名下有#
+  11. 设置404页面
+    {
+      path: '*',
+      component: Error
+    }
+    新建 Error.vue
+  12. 路由中的钩子函数
+    进入路由
+    离开路由
 
-
-
+    在路由中配置：
+      beforeEnter: (to,from,next) => {
+        ...
+        next();// true, false, {path: ''}
+      }
+      不可以写离开的钩子函数
+    在当前模板中配置：
+      beforeRouteEnter: (to,from,next) => {
+        ...
+        next();// true, false, {path: ''}
+      }
+      beforeRouteLeave: (to,from,next) => {
+        ...
+        next();// true, false, {path: ''}
+      }
+  13. 编程式导航
+    this.$router.go(-1)
+    this.$router.go(1)
+    this.$router.push('/')// 加入路径，跳转
 # todo
 1. Vue.config.productionTip = false
 

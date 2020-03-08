@@ -14,6 +14,16 @@ export default {
     return {
       msg: 'hi页面'
     }
+  },
+  beforeRouteEnter: (to,from,next) => {
+    console.log('to', to)
+    console.log('from', from)
+    next()
+  },
+  beforeRouteLeave: (to,from,next) => {
+    console.log('to', to)
+    console.log('from', from)
+    next()
   }
 }
 </script>
