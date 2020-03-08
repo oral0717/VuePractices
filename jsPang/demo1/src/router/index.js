@@ -22,6 +22,10 @@ export default new Router({
     }, {
       path: '/goHi/:id(\\d+)/:slogan',
       redirect: '/hi/:id(\\d+)/:slogan'
+    }, {
+      path: '/hi1',
+      component: Hi1,
+      alias: '/alias'
     }
   ]
 })

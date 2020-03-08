@@ -70,6 +70,7 @@ npm run dev
         path: '/goHi/:id(\\d+)/:slogan',
         redirect: '/hi/:id(\\d+)/:slogan'
       }
+  8. alias别名
 
 
 
