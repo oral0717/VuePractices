@@ -1,5 +1,8 @@
 <template>
-  <div>{{ msg }}</div>
+  <div>
+    <div class="msg">{{ msg }}</div>
+    <router-view/>
+  </div>
 </template>
 
 <script>
@@ -14,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-div {
+.msg {
   border:1px solid red;
 }
 </style>
