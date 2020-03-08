@@ -8,6 +8,8 @@
       <router-link to='/hi/hi2'>hi页2</router-link>
     </div>
     <router-view/>
+    <router-view name='left'/>
+    <router-view name='right'/>
   </div>
 </template>
 
