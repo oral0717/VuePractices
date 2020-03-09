@@ -1,3 +1,9 @@
+# 注意
+1. 放置服务器前，需要进config/index.js修改静态文件相对路径
+  assetsPublicPath: '/'改为
+  assetsPublicPath: './'
+  然后打包，打包成功后放到服务器上可以访问
+  
 ## vue-cli生成项目
 ```
 npm install --global vue-cli // 全局安装vue-cli

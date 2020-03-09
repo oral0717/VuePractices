@@ -1,6 +1,12 @@
 vuex
 状态管理模式(state management pattern)+实现库（library implementation）
+# 注意
+1. 放置服务器前，需要进config/index.js修改静态文件相对路径
+  assetsPublicPath: '/'改为
+  assetsPublicPath: './'
+  然后打包，打包成功后放到服务器上可以访问
 
+## 基础知识
 1. 计数器
   初级使用vuex
   1. 建立vuex文件夹
@@ -94,8 +100,20 @@ vuex
           store
         }
       </script>
-3.
-
+3. getters计算过滤操作,执行click上绑定的事件的时候都会执行过滤操作
+  mapGetters
+  1.<script>
+      import store from '@/vuex/store.js'
+      import {mapState,mapMutations,mapGetters} from 'vuex'
+      export default {
+        computed: {
+          ...mapState(['count']),
+          ...mapGetter(['count'])
+        },
+        methods: mapMutations(['add','reduce']),
+        store
+      }
+    </script>
 
 
 
