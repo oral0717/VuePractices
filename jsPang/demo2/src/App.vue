@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/logo.png"><br/>
+    <router-link to='/'>首页</router-link> |
+    <router-link to='/count'>计数器</router-link>
     <router-view/>
   </div>
 </template>
