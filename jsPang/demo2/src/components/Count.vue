@@ -5,14 +5,16 @@
     <div>
       <button @click="$store.commit('add', 10)">+</button>
       <button @click="add(10)">+</button>
-      <button @click="reduce">-</button>
+      <button @click="reduce">-</button><br/>
+      <button @click="addAction">+</button>
+      <button @click="reduceAction">-</button>
     </div>
   </div>
 </template>
 
 <script>
 import store from "@/vuex/store"
-import {mapState,mapMutations,mapGetters} from 'vuex'
+import {mapState,mapMutations,mapGetters,mapActions} from 'vuex'
 export default {
   data() {
     return {
@@ -20,10 +22,13 @@ export default {
     }
   },
   computed: {
-    ...mapState(['count']),
-    ...mapGetters(['count'])
+    ...mapState(['count'])
+    // ...mapGetters(['count'])
   },
-  methods: mapMutations(['add', 'reduce']),
+  methods: {
+    ...mapMutations(['add', 'reduce']),
+    ...mapActions(['addAction', 'reduceAction'])
+  },
   store
 }
 </script>

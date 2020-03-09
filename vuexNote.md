@@ -114,7 +114,8 @@ vuex
         store
       }
     </script>
-
+4. actions异步修改状态
+5. module模块组
 
 
 
