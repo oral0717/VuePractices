@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div>{{msg}}</div>
+    <i class="icon iconfont icon-shengxianshuiguo"></i>
+    <div><i class="icon iconfont icon-chaozhijifen"></i>{{msg}}</div>
     <el-button type="success">默认按钮</el-button>
   </div>
 </template>
@@ -14,7 +15,7 @@ Vue.use(Button)
 export default {
   data () {
     return {
-      msg: 'Pos页面'
+      msg: 'Pos 页面'
     }
   }
 }
