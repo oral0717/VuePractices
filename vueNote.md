@@ -3,7 +3,7 @@
   assetsPublicPath: '/'改为
   assetsPublicPath: './'
   然后打包，打包成功后放到服务器上可以访问
-  
+
 ## vue-cli生成项目
 ```
 npm install --global vue-cli // 全局安装vue-cli
@@ -150,4 +150,40 @@ var app = new Vue({
 3. watch: {
 
 }
+
+## vue项目加入element-ui
+  1. 安装 yarn add element-ui
+  2. 修改 .babelrc
+      {
+        "presets": [["es2015", { "modules": false }]],
+        "plugins": [
+          [
+            "component",
+            {
+              "libraryName": "element-ui",
+              "styleLibraryName": "theme-chalk"
+            }
+          ]
+        ]
+      }
+  3. 安装包：yarn add babel-plugin-component -D
+            yarn add babel-preset-env -D
+            yarn add babel-preset-es2015 -D
+  4. 组件内使用：
+      import Vue from 'vue'
+      import { Button } from 'element-ui'
+      import 'element-ui/lib/theme-chalk/index.css'
+      Vue.use(Button)
+
+      <el-button type="success">默认按钮</el-button>
+
+## vue项目加入iconfont， [iconfont网站](www.iconfont.cn)
+  1. 访问网站，登录
+  2. 选中图表加入购物车
+  3. 去购物车将选中的icon生成线上css文件
+  4. 将线上文件放入html模板文件index.html中
+  5. 在组件中直接使用<i class="icon iconfont 图标名"></i>
+
+
+
 
