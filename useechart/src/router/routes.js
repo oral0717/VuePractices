@@ -1,13 +1,13 @@
 import Home from '../components/Home'
-import About from '../components/About'
+import Map from '../components/Map'
 
 const routes = [
   {
     path: '/',
-    component: Home
+    component: Map
   },{
-    path: '/about',
-    component: About
+    path: '/chart',
+    component: Home
   }
 ]
 

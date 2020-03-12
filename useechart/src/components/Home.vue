@@ -12,7 +12,7 @@ import echarts from 'echarts'
 export default {
   data(){
     return {
-      msg: '疫情地图'
+      msg: '疫情趋势'
     }
   },
   mounted(){
@@ -22,6 +22,7 @@ export default {
     init(){
       const myChart = echarts.init(document.getElementById('chart2'));
       const option = {
+        backgroundColor: 'pink',
         title: {
           text: '全国 新增确诊/疑似 趋势'
         },
@@ -29,12 +30,14 @@ export default {
           trigger: 'axis'
         },
         legend: {
-          data: ['新增确诊', '新增疑似']
+          data: ['新增确诊', '新增疑似'],
+          bottom: 0,
+          left: 0
         },
         grid: {
           left: '3%',
           right: '4%',
-          bottom: '3%',
+          bottom: '13%',
           containLabel: true
         },
         toolbox: {

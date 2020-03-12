@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to='/'>累计确诊</router-link> |
-      <router-link to='/about'>疫情动态</router-link>
+      <router-link to='/chart'>疫情动态</router-link>
     </div>
     <router-view/>
   </div>
