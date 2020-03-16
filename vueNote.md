@@ -6,11 +6,16 @@
 
 ## vue-cli生成项目
 ```
-npm install --global vue-cli // 全局安装vue-cli
+npm install --global vue-cli // 全局安装vue-cli, 版本老，vue -V => 2.9.6
 vue init webpack my-project // 创建一个基于webpack模板的新项目my-project
 cd my-project
 npm install
 npm run dev
+```
+
+```
+cnpm install -g @vue/cli  // vue -V => 4.2.3
+vue create xxx
 ```
 生成项目代码过程中：
 ? Vue build // 选择采用的编译形式
