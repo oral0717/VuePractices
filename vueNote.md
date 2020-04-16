@@ -1,5 +1,5 @@
 # 注意
-1. 放置服务器前，需要进config/index.js修改静态文件相对路径
+1. 放置服务器前，需要将config/index.js修改静态文件相对路径
   assetsPublicPath: '/'改为
   assetsPublicPath: './'
   然后打包，打包成功后放到服务器上可以访问
