@@ -35,6 +35,11 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  created: function(){
+    fetch('/api/order/getAllArea').then((res)=>{
+      console.log(res, 1)
+    })
   }
 }
 </script>

@@ -17,7 +17,7 @@ vuex
 
       Vue.use(Vuex)
 
-      consot state = {
+      const state = {
         count: 0
       }
       const mutation = {
@@ -117,7 +117,7 @@ vuex
 4. actions异步修改状态
 5. module模块组
 
-
+https://www.cnblogs.com/lyxzxp/p/11778579.html 学习文档
 
 
 
