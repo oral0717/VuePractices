@@ -4,7 +4,11 @@
     <ul>
       <li v-for="(good, index) in goods" :key="good.id">
         {{index + 1}}: {{good.text}} | {{good.price}}
-        <button @click="addCart(index)">加入购物车</button>
+        <el-button
+          type="danger"
+          size="mini"
+          round
+          @click="addCart(index)">加入购物车</el-button>
       </li>
     </ul>
     <Cart :cartArr="cart" @add="onAdd" @reduce="onReduce" @del="onDel"/>
@@ -12,7 +16,13 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import Cart from './components/Cart'
+
+Vue.use(ElementUI)
+
 export default {
   components: {
     Cart
