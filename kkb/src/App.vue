@@ -7,30 +7,16 @@
         <button @click="addCart(index)">加入购物车</button>
       </li>
     </ul>
-    <p>购物车展示</p>
-    <table border="1">
-      <thead>
-        <th>商品编码</th>
-        <th>商品名称</th>
-        <th>商品单价</th>
-        <th>数量</th>
-        <th>总价</th>
-      </thead>
-      <tbody>
-        <tr v-for="good in cart" :key="good.id">
-          <td>{{good.id}}</td>
-          <td>{{good.text}}</td>
-          <td>{{good.price}}</td>
-          <td>{{good.count}}</td>
-          <td>{{good.price*good.count}}</td>
-        </tr>
-      </tbody>
-    </table>
+    <Cart :cartArr="cart" @add="onAdd" @reduce="onReduce" @del="onDel"/>
   </div>
 </template>
 
 <script>
+import Cart from './components/Cart'
 export default {
+  components: {
+    Cart
+  },
   data() {
     return {
       count: 1,
@@ -43,6 +29,22 @@ export default {
     }
   },
   methods: {
+    onAdd(arg) {
+      const { index } = arg
+      this.cart[index].count += 1
+    },
+    onReduce(arg) {
+      const { index } = arg
+      if (this.cart[index].count > 1) {
+        this.cart[index].count -= 1
+      } else {
+        console.log('不能更少了')
+      }
+    },
+    onDel(arg){
+      const { index } = arg
+      this.cart.splice(index, 1)
+    },
     addCart(index) {
       let item = this.goods[index]
       let good = this.cart.find(v => v.id === item.id)
