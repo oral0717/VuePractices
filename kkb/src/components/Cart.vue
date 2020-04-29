@@ -3,6 +3,7 @@
     <p>购物车</p>
     <table border="1">
       <thead>
+        <th>订单号</th>
         <th>商品编码</th>
         <th>商品名称</th>
         <th>商品单价</th>
@@ -12,6 +13,7 @@
       </thead>
       <tbody>
         <tr v-for="(good,index) in cartArr" :key="good.id">
+          <td>{{good.masterNumber}}</td>
           <td>{{good.id}}</td>
           <td>{{good.text}}</td>
           <td>{{good.price}}</td>

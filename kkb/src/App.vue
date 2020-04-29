@@ -12,6 +12,7 @@
       </li>
     </ul>
     <Cart :cartArr="cart" @add="onAdd" @reduce="onReduce" @del="onDel"/>
+    <CartElementUI :cartArr="cart" @add="onAdd" @reduce="onReduce" @del="onDel"/>
   </div>
 </template>
 
@@ -20,12 +21,14 @@ import Vue from 'vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import Cart from './components/Cart'
+import CartElementUI from './components/CartElementUI'
 
 Vue.use(ElementUI)
 
 export default {
   components: {
-    Cart
+    Cart,
+    CartElementUI
   },
   data() {
     return {
