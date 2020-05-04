@@ -15,7 +15,7 @@
         <tr v-for="(good,index) in cartArr" :key="good.id">
           <td>{{good.masterNumber}}</td>
           <td>{{good.id}}</td>
-          <td>{{good.text}}</td>
+          <td>{{good.title}}</td>
           <td>{{good.price}}</td>
           <td>{{good.count}}</td>
           <td>{{good.price * good.count}}</td>

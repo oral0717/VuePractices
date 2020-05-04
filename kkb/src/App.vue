@@ -1,9 +1,35 @@
 <template>
   <div>
+    <el-row>
+      <el-col
+        :span="6"
+        v-for="item in goods"
+        :key="item.id"
+      >
+        <el-card>
+          <img
+            :src="item.img"
+            class="image"
+            :alt="item.title"
+          />
+          <div class="option">
+            <el-col :span="14">
+              <span>{{item.title}}</span>
+            </el-col>
+            <el-col :span="10">
+              <el-button type="danger" size="mini">
+                <i class="el-icon-plus"></i>
+                添加到购物车
+              </el-button>
+            </el-col>
+          </div>
+        </el-card>
+      </el-col>
+    </el-row>
     <h1>xx{{count}}</h1>
     <ul>
       <li v-for="(good, index) in goods" :key="good.id">
-        {{index + 1}}: {{good.text}} | {{good.price}}
+        {{index + 1}}: {{good.title}} | {{good.price}}
         <el-button
           type="danger"
           size="mini"
@@ -22,6 +48,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import Cart from './components/Cart'
 import CartElementUI from './components/CartElementUI'
+import axios from 'axios'
 
 Vue.use(ElementUI)
 
@@ -33,13 +60,13 @@ export default {
   data() {
     return {
       count: 1,
-      goods: [
-        {id: 123, text: "商品一", price: 10},
-        {id: 245, text: "商品二", price: 20},
-        {id: 3674, text: "商品三", price: 50},
-      ],
+      goods: [],
       cart: []
     }
+  },
+  async created() {
+    let {data} = await axios.get('/api/goods')
+    this.goods = data.data
   },
   methods: {
     onAdd(arg) {
@@ -74,5 +101,11 @@ export default {
 <style scoped>
 h1 {
   color: red;
+}
+.image{
+  width: 100%;
+}
+.option{
+  margin-bottom: 20px;
 }
 </style>
