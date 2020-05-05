@@ -55,6 +55,48 @@ module.exports = {
                 price: 70,
                 img: 'img/7.jpg',
                 count: 60
+              },
+              {
+                id: 8,
+                title: '商品8',
+                price: 70,
+                img: 'img/8.jpg',
+                count: 60
+              },
+              {
+                id: 9,
+                title: '商品9',
+                price: 70,
+                img: 'img/9.jpg',
+                count: 60
+              },
+              {
+                id: 10,
+                title: '商品10',
+                price: 70,
+                img: 'img/10.jpg',
+                count: 60
+              },
+              {
+                id: 11,
+                title: '商品11',
+                price: 70,
+                img: 'img/11.jpg',
+                count: 60
+              },
+              {
+                id: 12,
+                title: '商品12',
+                price: 70,
+                img: 'img/12.jpg',
+                count: 60
+              },
+              {
+                id: 13,
+                title: '商品13',
+                price: 70,
+                img: 'img/13.jpg',
+                count: 60
               }
             ]
           })
