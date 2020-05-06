@@ -1,16 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
-import Home from '../views/Home'
-import Cart from '../views/Cart'
+import { homeRoutes } from './home'
+import { cartRoutes } from './cart'
 
 Vue.use(VueRouter)
 
+const routes = [
+  ...homeRoutes,
+  ...cartRoutes
+]
+console.log(routes)
+
 let router = new VueRouter({
-  routes: [
-    { path: '/', component: Home, name: 'home' },
-    { path: '/cart', component: Cart, name: 'cart' }
-  ]
+  routes
 })
 
 export default router
