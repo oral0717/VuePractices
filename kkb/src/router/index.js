@@ -12,7 +12,9 @@ const routes = [
 console.log(routes)
 
 let router = new VueRouter({
+  mode: 'history',
   routes
 })
 
 export default router
+
