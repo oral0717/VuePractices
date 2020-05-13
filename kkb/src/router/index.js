@@ -9,7 +9,7 @@ const routes = [
   ...homeRoutes,
   ...cartRoutes
 ]
-console.log(routes)
+// console.log(routes)
 
 let router = new VueRouter({
   mode: 'history',

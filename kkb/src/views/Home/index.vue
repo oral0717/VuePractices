@@ -5,8 +5,13 @@
 </template>
 
 <script>
+  // import store from "@/store"
   export default {
-    name: 'Home'
+    name: 'Home',
+    data() {
+      console.log('22', this.$store.state)
+      return {}
+    }
   }
 </script>
 
