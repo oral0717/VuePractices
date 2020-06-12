@@ -8,6 +8,7 @@
       <el-table-column
         v-for="item in tableData.tableColumn"
         :type="item.type"
+        :selectable="checkboxSelectable"
         :key="item.id"
         :prop="item.prop"
         :label="item.label"
@@ -32,6 +33,9 @@ export default {
     handleSelectionChange(...rest) {
       console.log('所有参数', rest)
       // this.$emit('change', rest)
+    },
+    checkboxSelectable() {
+      return false
     }
   }
 }
