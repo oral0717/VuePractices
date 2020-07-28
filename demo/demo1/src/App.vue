@@ -1,17 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TitledFrame>
+      <template v-slot:header>wo</template>
+      xxx
+      <template v-slot:demo>
+        <p>p元素</p>
+      </template>
+    </TitledFrame>
+    分隔
+    <CurrentUser v-slot="{user}">
+      <template>
+        {{user.firstName}}
+      </template>
+    </CurrentUser>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TitledFrame from './components/TitledFrame.vue'
+import CurrentUser from './components/CurrentUser.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TitledFrame,
+    CurrentUser
   }
 }
 </script>
@@ -21,8 +34,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
