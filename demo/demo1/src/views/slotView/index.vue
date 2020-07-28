@@ -1,7 +1,29 @@
-## 插槽知识点
+<template>
+  <div>
+    <TitledFrame>
+      <template v-slot:header>wo</template>
+      xxx
+      <template v-slot:demo>
+        <p>p元素</p>
+      </template>
+    </TitledFrame>
+    <!--
 1. 插槽为你提供了一个将内容放置到新位置或使组件更通用的出口
 2. 可以向组件添加多个插槽，但是如果这样做了，那么除了其中一个之外，其他所有插槽都需要有名称。如果有一个没有名称的槽，它就是默认槽
 3. 用v-slot指令将代码包裹在template标记中。在v-slot之后添加冒号(:)，然后写出要传递内容的slot的名称，v-slot:name,name是插槽名字
+     -->
+    <hr/>
+    <!-- <CurrentUser>
+      <template v-slot:default="slotProps">
+        {{slotProps.user.firstName}}
+      </template>
+    </CurrentUser> -->
+    <CurrentUser v-slot="{user}">
+      <template>
+        {{user.firstName}}
+      </template>
+    </CurrentUser>
+    <!--
 ## 作用域插槽
 1. v-slot 的别名是#
   v-slot:header="data" 等价于 #slot="data"
@@ -11,3 +33,21 @@
 4. 可以使用对象解构来创建对作用域插槽数据的直接引用，而不是使用单个变量名，可以使用v-slot="{user}"，下面直接使用user
 5. 可以使用v-bind指令绑定多个值
 6. 可以将函数传递到作用域槽。许多库使用它来提供可重用的函数组件
+     -->
+    <hr/>
+  </div>
+</template>
+
+<script>
+import TitledFrame from './TitledFrame.vue'
+import CurrentUser from './CurrentUser.vue'
+
+export default {
+  name: 'App',
+  components: {
+    TitledFrame,
+    CurrentUser
+  }
+}
+</script>
+

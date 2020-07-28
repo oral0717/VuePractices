@@ -1,13 +1,13 @@
 <template>
   <div class="frame">
-    <heander>
+    <header>
       <h2>
         <slot name="header">title</slot>
       </h2>
       <h3>
         <slot name="demo">demo</slot>
       </h3>
-    </heander>
+    </header>
     <section>section</section>
     <slot>默认</slot>
     <footer>footer</footer>

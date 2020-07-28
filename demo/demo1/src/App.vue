@@ -1,30 +1,16 @@
 <template>
   <div id="app">
-    <TitledFrame>
-      <template v-slot:header>wo</template>
-      xxx
-      <template v-slot:demo>
-        <p>p元素</p>
-      </template>
-    </TitledFrame>
-    分隔
-    <CurrentUser v-slot="{user}">
-      <template>
-        {{user.firstName}}
-      </template>
-    </CurrentUser>
+    <slotView></slotView>
   </div>
 </template>
 
 <script>
-import TitledFrame from './components/TitledFrame.vue'
-import CurrentUser from './components/CurrentUser.vue'
+import slotView from './views/slotView/index.vue'
 
 export default {
   name: 'App',
   components: {
-    TitledFrame,
-    CurrentUser
+    slotView
   }
 }
 </script>
