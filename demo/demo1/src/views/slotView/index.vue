@@ -35,6 +35,7 @@
 6. 可以将函数传递到作用域槽。许多库使用它来提供可重用的函数组件
      -->
     <hr/>
+    <el-button type="primary">默认按钮</el-button>
   </div>
 </template>
 
