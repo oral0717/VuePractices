@@ -35,19 +35,22 @@
 6. 可以将函数传递到作用域槽。许多库使用它来提供可重用的函数组件
      -->
     <hr/>
-    <el-button type="primary">默认按钮</el-button>
+    <MyButton>自定义按钮文案</MyButton>
+    <hr/>
   </div>
 </template>
 
 <script>
 import TitledFrame from './TitledFrame.vue'
 import CurrentUser from './CurrentUser.vue'
+import MyButton from './MyButton.vue'
 
 export default {
   name: 'App',
   components: {
     TitledFrame,
-    CurrentUser
+    CurrentUser,
+    MyButton
   }
 }
 </script>
