@@ -37,6 +37,7 @@
     <hr/>
     <MyButton>自定义按钮文案</MyButton>
     <hr/>
+    <MyModal>弹出框</MyModal>
   </div>
 </template>
 
@@ -44,13 +45,15 @@
 import TitledFrame from './TitledFrame.vue'
 import CurrentUser from './CurrentUser.vue'
 import MyButton from './MyButton.vue'
+import MyModal from './MyModal.vue'
 
 export default {
   name: 'App',
   components: {
     TitledFrame,
     CurrentUser,
-    MyButton
+    MyButton,
+    MyModal
   }
 }
 </script>
