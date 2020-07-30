@@ -9,7 +9,8 @@ AMap.initAMapApiLoader({
   // 高德key
   key: 'b950f9dc04152b72b84cabbea21112d3',
   // 插件集合 （插件按需引入）
-  plugin: ['AMap.Geolocation']
+  plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor'],
+  v: '1.4.4'
 });
 
 new Vue({
