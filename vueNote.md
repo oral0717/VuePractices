@@ -5,7 +5,7 @@
   然后打包，打包成功后放到服务器上可以访问
 
 ## vue-cli生成项目
-```
+```js
 npm install --global vue-cli // 全局安装vue-cli, 版本老，vue -V => 2.9.6
 vue init webpack my-project // 创建一个基于webpack模板的新项目my-project
 cd my-project
@@ -13,8 +13,8 @@ npm install
 npm run dev
 ```
 
-```
-cnpm install -g @vue/cli  // vue -V => 4.2.3
+```js
+cnpm install -g @vue/cli  // vue -V => 4.5.9
 vue create xxx
 ```
 生成项目代码过程中：
@@ -58,7 +58,8 @@ vue create xxx
   <p>{{ message }}</p>
   <input v-model="message" /><!-- v-model实现表单输入和应用状态之间的双向绑定 -->
 </div>
-```
+
+```js
 var app = new Vue({
   el: '#app',
   data: {
@@ -88,6 +89,8 @@ var app = new Vue({
     ></todo-item>
   <ul>
 </div>
+
+```js
 Vue.component('todo-item', {
   props: ['todo'],
   template: '<li>{{todo.text}}</li>'
@@ -102,7 +105,7 @@ var app = new Vue({
     ]
   }
 })
-
+```
 ## Vue实例
 1. var vm = new Vue({
 
