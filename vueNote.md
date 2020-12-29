@@ -192,6 +192,32 @@ var app = new Vue({
   4. 将线上文件放入html模板文件index.html中
   5. 在组件中直接使用<i class="icon iconfont 图标名"></i>
 
-
+## Vue3.0
+```js
+import {
+  reactive, // 生成响应式数据
+  toRefs,
+  computed,
+  onMounted, // 组件挂载
+  onUnmounted // 组件销毁
+} from 'vue'
+export default {
+  name: '',
+  setup() {
+    const state = reactive({
+      id: 1,
+      name: ''
+    })
+    const methods = {
+      change1() {},
+      change2() {}
+    }
+    return {
+      ...toRefs(state), // es6的结构会取消双向数据绑定的特性，toRefs转为响应式数据
+      ...methods
+    }
+  }
+}
+```
 
 
