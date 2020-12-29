@@ -213,7 +213,7 @@ export default {
       change2() {}
     }
     return {
-      ...toRefs(state), // es6的结构会取消双向数据绑定的特性，toRefs转为响应式数据
+      ...toRefs(state), // es6的解构会取消双向数据绑定的特性，toRefs转为响应式数据
       ...methods
     }
   }
