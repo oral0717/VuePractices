@@ -10,7 +10,7 @@ export default defineComponent({
     msg: String
   },
   setup(props, context) {
-    console.log(1111,props, context.attrs)
+    // console.log(1111,props, context.attrs)
     function updateCountX() {
       context.emit('updateCount', '77')
     }
