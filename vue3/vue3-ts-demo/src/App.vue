@@ -1,5 +1,12 @@
+<!--
+ * @Descripttion: 
+ * @Author: Oral
+ * @Date: 2022-07-29 13:55:14
+ * @LastEditTime: 2022-07-29 17:01:01
+-->
 <template>
   <nav>
+    <el-button type="primary">I am ElButton</el-button>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
