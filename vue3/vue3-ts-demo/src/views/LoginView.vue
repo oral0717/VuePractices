@@ -14,11 +14,18 @@
             v-model="ruleForm.username"
             placeholder="请输入用户名"
             autocomplete="off"
-            :prefix-icon="Search"
+            prefix-icon="UserFilled"
           />
         </el-form-item>
         <el-form-item prop="password">
-          <el-input v-model="ruleForm.password" placeholder="请输入密码" type="password" autocomplete="off" />
+          <el-input
+            v-model="ruleForm.password"
+            placeholder="请输入密码"
+            type="password"
+            autocomplete="off"
+            prefix-icon="Key"
+            show-password
+          />
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="submitForm(ruleFormRef)"
@@ -34,6 +41,7 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
 import type {FormRules} from 'element-plus'
+import { Search } from '@element-plus/icons-vue'
 
 export default defineComponent({
   setup () {
