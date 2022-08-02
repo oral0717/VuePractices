@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.0.6",
     "core-js": "^3.8.3",
     "element-plus": "^2.2.11",
     "vue": "^3.2.13",
@@ -15,6 +16,9 @@
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "@iconify-json/ic": "^1.1.8",
+    "@iconify-json/system-uicons": "^1.1.4",
+    "@iconify/vue": "^3.2.1",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -30,6 +34,7 @@
     "sass-loader": "^12.0.0",
     "typescript": "~4.5.5",
     "unplugin-auto-import": "^0.10.2",
+    "unplugin-icons": "^0.14.8",
     "unplugin-vue-components": "^0.21.2"
   },
   "eslintConfig": {
