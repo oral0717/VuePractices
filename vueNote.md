@@ -249,5 +249,5 @@ export default {
 ## 简写snippet
 vb  生成vue组件
 
-
+## vue3+vite
 
